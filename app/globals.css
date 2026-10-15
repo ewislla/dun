@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #08090c;
+    --card-dark: #101217;
+    --card-surface: #161920;
+    --magenta: #ff007f;
+    --magenta-glow: rgba(255, 0, 127, 0.45);
+    --cyan: #00f0ff;
+    --cyan-glow: rgba(0, 240, 255, 0.4);
+  }
+
+  body {
+    background-color: #08090c;
+    color: #e2e8f0;
+    font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    selection-background-color: #ff007f;
+    selection-color: #ffffff;
+  }
+
+  ::selection {
+    background-color: #ff007f;
+    color: #ffffff;
+  }
+}
+
+/* Subtle, authentic carbon fiber weave */
+.bg-carbon {
+  background-color: #0c0d12;
+  background-image: 
+    linear-gradient(45deg, #13161f 25%, transparent 25%), 
+    linear-gradient(-45deg, #13161f 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, #13161f 75%), 
+    linear-gradient(-45deg, transparent 75%, #13161f 75%);
+  background-size: 10px 10px;
+  background-position: 0 0, 0 5px, 5px -5px, -5px 0px;
+}
+
+.bg-carbon-dense {
+  background-color: #090a0e;
+  background-image: 
+    linear-gradient(45deg, #11131a 25%, transparent 25%), 
+    linear-gradient(-45deg, #11131a 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, #11131a 75%), 
+    linear-gradient(-45deg, transparent 75%, #11131a 75%);
+  background-size: 6px 6px;
+  background-position: 0 0, 0 3px, 3px -3px, -3px 0px;
+}
+
+/* Chrome metallic typography */
+.text-chrome {
+  background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 25%, #cbd5e1 50%, #94a3b8 52%, #e2e8f0 75%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-chrome-italic {
+  background: linear-gradient(180deg, #ffffff 0%, #e2e8f0 35%, #94a3b8 50%, #f8fafc 70%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+}
+
+/* Neon glow utilities */
+.glow-magenta {
+  box-shadow: 0 0 30px -4px rgba(255, 0, 127, 0.45), 0 0 12px -2px rgba(255, 0, 127, 0.3);
+}
+
+.glow-magenta-sm {
+  box-shadow: 0 0 15px -2px rgba(255, 0, 127, 0.35);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 30px -4px rgba(0, 240, 255, 0.4), 0 0 12px -2px rgba(0, 240, 255, 0.25);
+}
+
+.glow-cyan-sm {
+  box-shadow: 0 0 15px -2px rgba(0, 240, 255, 0.3);
+}
+
+/* Wet gloss specular reflection effect */
+.gloss-overlay {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.02) 40%, transparent 60%);
+}
+
+/* Gradient borders */
+.border-gradient-magenta {
+  border-image: linear-gradient(to bottom right, #ff007f, rgba(255, 0, 127, 0.2), transparent) 1;
+}
+
+.border-gradient-cyan {
+  border-image: linear-gradient(to bottom right, #00f0ff, rgba(0, 240, 255, 0.2), transparent) 1;
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08090c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e222d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff007f;
+}
